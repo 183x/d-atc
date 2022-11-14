@@ -31,6 +31,7 @@
             var geo_text = "速度:" + position.coords.speed + "km/h\n";
             geo_text += "前方車走行速度:" + position.coords.speed + "km/h\n";
             geo_text += "制限速度:" + position.coords.speed + "-10km/h\n";
+            geo_text += "情報更新回数:" + (++num) + "\n";
             var date = new Date(position.timestamp);
             document.getElementById('position_view').innerHTML = geo_text;
         }
