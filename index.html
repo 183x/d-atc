@@ -17,7 +17,7 @@
                 alert(e.message);
             }, {
                 "enableHighAccuracy": true,
-                "timeout": 20000,
+                "timeout": 9000000000000000,
                 "maximumAge": 2000
             });
         }
@@ -28,10 +28,11 @@
 
         function test2(position) {
 
-            var geo_text = "速度:" + position.coords.speed + "km/h\n";
-            geo_text += "前方車走行速度:" + position.coords.speed + "km/h\n";
-            geo_text += "制限速度:" + position.coords.speed + "-10km/h\n";
-            geo_text += "情報更新回数:" + (++num) + "\n";
+            var geo_text = "走行速度: " + position.coords.speed + "km/h\n";
+            geo_text += "制限速度設定: 60km/h\n";
+            geo_text += "走行車間距離: " + position.coords.speed + "m\n";
+            geo_text += "ブレーキ動作設定: +5km/h\n";
+            geo_text += "情報取得回数: " + (++num) + "\n";
             var date = new Date(position.timestamp);
             document.getElementById('position_view').innerHTML = geo_text;
         }
